@@ -28,10 +28,10 @@ FOCUSED_MONITOR=$(hyprctl activeworkspace | awk -F 'monitor ' '{print $2}' | awk
 # 2. Aplica o wallpaper APENAS no monitor focado
 swww img "$TARGET_WALL" -o "$FOCUSED_MONITOR" --transition-type grow --transition-pos 0.5,0.5 --transition-step 90
 
-# EXTRA: Salva a imagem atual para o seu Fastfetch renderizar no Kitty
+# Salva a imagem atual para renderizar na tela de de login e no Rofi
 cp "$TARGET_WALL" ~/.cache/current_wallpaper.png
 
-# 3. MÁGICA SILENCIOSA: Força a primeira cor principal sem pedir confirmação
+# 3. Força a primeira cor principal sem pedir confirmação
 matugen image "$TARGET_WALL" --source-color-index 0
 
 # 4. Recarrega a Waybar
