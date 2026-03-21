@@ -1,0 +1,8 @@
+* {
+    background-col:     {{colors.surface.default.hex}};
+    background-alt-col: {{colors.surface_variant.default.hex}};
+    foreground-col:     {{colors.on_surface.default.hex}};
+    selected-col:       {{colors.primary.default.hex}};
+    active-col:         {{colors.secondary.default.hex}};
+    urgent-col:         {{colors.error.default.hex}};
+}

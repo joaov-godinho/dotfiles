@@ -1,0 +1,55 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    background-image: none;
+}
+
+window {
+    background-color: rgba(26, 17, 17, 0.9);
+}
+
+button {
+    color: #f0dede;
+    background-color: rgba(42, 30, 30, 0.8);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 179, 178, 0.3);
+    border-radius: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    margin: 8px;
+    font-size: 14px;
+}
+
+button:focus,
+button:active,
+button:hover {
+    background-color: rgba(115, 51, 53, 0.9);
+    border-color: #ffb3b2;
+    color: #ffb3b2;
+    outline-style: none;
+}
+
+#lock {
+    background-image: url("/home/jv-godinho/.config/wlogout/lock.png");
+}
+
+#logout {
+    background-image: url("/home/jv-godinho/.config/wlogout/logout.png");
+}
+
+#suspend {
+    background-image: url("/home/jv-godinho/.config/wlogout/suspend.png");
+}
+
+#hibernate {
+    background-image: url("/home/jv-godinho/.config/wlogout/hibernate.png");
+}
+
+#shutdown {
+    background-image: url("/home/jv-godinho/.config/wlogout/shutdown.png");
+}
+
+#reboot {
+    background-image: url("/home/jv-godinho/.config/wlogout/reboot.png");
+}

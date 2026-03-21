@@ -1,0 +1,87 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "margin-top": 6,
+    "margin-left": 12,
+    "margin-right": 24,
+    "output": "DP-1",
+    "spacing": 0,
+    "fixed-center": true,
+
+    "modules-left": ["hyprland/workspaces", "clock"],
+    "modules-center": ["mpris"],
+    "modules-right": ["network", "pulseaudio", "tray", "custom/notification", "custom/power"],
+
+    "hyprland/workspaces": {
+	"all-outputs": true,
+	"active-only": false,
+        "format": "{id}",
+        "on-click": "activate"
+    },
+
+    "clock": {
+        "format": "  {:%H:%M}",
+        "format-alt": "  {:%d/%m/%Y}",
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    
+    "mpris": {
+    "format": "{player_icon}  {title} - {artist}",
+    "format-paused": "{player_icon}  {title} - {artist}",
+    "player-icons": {
+        "default": "▶",
+        "spotify": "",
+        "firefox": "󰈹",
+        "brave": "󰈹"
+    },
+    "status-icons": {
+        "paused": ""
+    },
+    "max-length": 40
+    },
+    
+    "network": {
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰈀 ",
+        "format-disconnected": "󰌙",
+        "tooltip-format": "{ifname}: {ipaddr}"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle"
+    },
+
+    "tray": {
+        "spacing": 6,
+        "icon-size": 16
+    },
+    
+    "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+        "notification": "󰂚",
+        "none": "󰂜",
+        "dnd-notification": "󰂛",
+        "dnd-none": "󰂛"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "wlogout",
+	"tooltip": false
+    }
+}
