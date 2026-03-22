@@ -43,8 +43,8 @@
     
     "network": {
         "format-wifi": "  {essid}",
-        "format-ethernet": "󰈀 ",
-        "format-disconnected": "󰌙",
+        "format-ethernet": "󰈀 {ifname}",
+        "format-disconnected": "󰌙 {Desconectado}",
         "tooltip-format": "{ifname}: {ipaddr}"
     },
 

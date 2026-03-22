@@ -29,7 +29,8 @@ FOCUSED_MONITOR=$(hyprctl activeworkspace | awk -F 'monitor ' '{print $2}' | awk
 swww img "$TARGET_WALL" -o "$FOCUSED_MONITOR" --transition-type grow --transition-pos 0.5,0.5 --transition-step 90
 
 # Salva a imagem atual para renderizar na tela de de login e no Rofi
-cp "$TARGET_WALL" ~/.cache/current_wallpaper.png
+cp "$TARGET_WALL" ~/.cache/current_wallpaper.sudo
+sudo /usr/local/bin/update-sddm-wallpaper "$TARGET_WALL"
 
 # 3. Força a primeira cor principal sem pedir confirmação
 matugen image "$TARGET_WALL" --source-color-index 0
@@ -40,3 +41,5 @@ pkill waybar; sleep 0.5 && waybar & disown
 # 5. Recarrega o Kitty
 killall -SIGUSR1 kitty
 
+# 6. Recarrega o swaync
+pkill swaync && swaync &
