@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "loginctl lock-session",
+    "action" : "/home/jv-godinho/.local/bin/wl-lock",
     "text" : "Lock",
     "keybind" : "l"
 }
@@ -12,7 +12,7 @@
 }
 {
     "label" : "logout",
-    "action" : "loginctl terminate-user $USER",
+    "action" : "/home/jv-godinho/.local/bin/wl-logout",
     "text" : "Logout",
     "keybind" : "e"
 }
