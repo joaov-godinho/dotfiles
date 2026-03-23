@@ -1,0 +1,12 @@
+configuration {
+    modi: "drun,window,run";
+    show-icons: true;
+    icon-theme: "Papirus";
+    display-drun: "Applications";
+    display-window: "Windows";
+    display-run: "Run";
+    drun-display-format: "{name}";
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+@theme "/home/jv-godinho/.config/rofi/theme.rasi"

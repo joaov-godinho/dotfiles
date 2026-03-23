@@ -1,0 +1,8 @@
+* {
+    background-col:     #1a110f;
+    background-alt-col: #53433f;
+    foreground-col:     #f1dfda;
+    selected-col:       #ffb59d;
+    active-col:         #e7bdb0;
+    urgent-col:         #ffb4ab;
+}

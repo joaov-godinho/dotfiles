@@ -1,0 +1,81 @@
+@import "colors.rasi"
+
+window {
+    background-color: #00000099;
+    border-radius: 16px;
+    width: 900px;
+    border-color: @active-col;
+    border-width: 1px;
+    orientation: horizontal;
+    children: [ "left-image-box", "mainbox" ];
+}
+left-image-box {
+    width: 450px;
+    background-image: url("/home/jv-godinho/.cache/current_wallpaper.png", height);
+    border-radius: 16px 0px 0px 16px;
+}
+mainbox {
+    background-color: transparent;
+    children: [inputbar, listview];
+    spacing: 8px;
+    padding: 12px;
+}
+inputbar {
+    background-color: @background-alt-col;
+    border-radius: 10px;
+    padding: 8px 12px;
+    children: [prompt, entry];
+}
+prompt {
+    background-color: transparent;
+    text-color: @active-col;
+    padding: 0 8px 0 0;
+}
+entry {
+    background-color: transparent;
+    text-color: @foreground-col;
+    placeholder: "Search...";
+    placeholder-color: @active-col;
+}
+listview {
+    background-color: transparent;
+    columns: 1;
+    lines: 8;
+    spacing: 4px;
+}
+element {
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 8px 12px;
+    spacing: 12px;
+    children: [element-icon, element-text];
+}
+element selected {
+    background-color: @selected-col;
+}
+element-icon {
+    size: 24px;
+    background-color: transparent;
+}
+element-text {
+    background-color: transparent;
+    text-color: @foreground-col;
+    vertical-align: 0.5;
+}
+modes {
+    background-color: @background-alt-col;
+    border-radius: 8px;
+    padding: 4px;
+}
+button {
+    background-color: transparent;
+    text-color: @foreground-col;
+    border-radius: 6px;
+    padding: 4px 12px;
+}
+button selected {
+    background-color: @active-col;
+    text-color: @background-alt-col;
+}
+
+
